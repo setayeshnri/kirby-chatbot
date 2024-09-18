@@ -23,9 +23,9 @@ const QuestionBox: React.FC<QuestionBoxProps> = ({ onSend }) => {
   };
 
   return (
-    <div className="bg-white rounded-full w-[31vw] flex flex-row justify-between p-[0.3vw] mt-[2.6vw]">
+    <div className=" bg-white rounded-full w-[31vw] flex flex-row justify-between p-[0.3vw] mt-[2.6vw] max-lg:w-[65vw] max-lg:h-[7vw] max-lg:m-auto">
       <input
-        className="w-[24vw] relative z-10 rounded-full left-[1vw] focus:outline-none text-[1.5vw]"
+        className="w-[24vw] relative z-10 rounded-full left-[1vw] focus:outline-none text-[1.5vw] max-lg:text-[3.3vw]"
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
@@ -33,10 +33,14 @@ const QuestionBox: React.FC<QuestionBoxProps> = ({ onSend }) => {
         placeholder="Message Kirby..."
       />
       <button
-        className="bg-blue-400 rounded-full h-[4vw] w-[4vw] z-20 "
+        className="bg-blue-400 rounded-full h-[4vw] w-[4vw] z-20 max-lg:w-[6vw] max-lg:h-[6vw] "
         onClick={handleSend}
       >
-        <Image className="m-auto w-[2.1vw]" src={arrowUp} alt="arrow up" />
+        <Image
+          className="m-auto w-[2.1vw] max-lg:w-[3vw]"
+          src={arrowUp}
+          alt="arrow up"
+        />
       </button>
     </div>
   );

@@ -11,19 +11,19 @@ const TextBox: React.FC<TextBoxProps> = ({ conversation }) => {
     scrollBottom();
   }, [conversation]);
   return (
-    <div className="message overflow-y-auto h-[32vw] mt-[0.4vw]" >
+    <div className="message overflow-y-auto h-[32vw] mt-[0.4vw]">
       {conversation.map((msg, index) => (
         <p
           key={index}
           className={
             msg.role === "user"
-              ? "bg-white p-3 rounded-3xl mt-2 text-[1.3vw]"
-              : "bg-gray-200 p-3 rounded-3xl mt-2 text-[1.3vw]"
+              ? "bg-white p-3 rounded-3xl mt-2 text-[1.3vw] max-lg:text-[3vw]"
+              : "bg-gray-200 p-3 rounded-3xl mt-2 text-[1.3vw] max-lg:text-[3vw]"
           }
         >
           {msg.role === "user" ? "you: " : "kirby: "}
           {msg.content}
-          <div ref={messageRef} ></div>
+          <div ref={messageRef}></div>
         </p>
       ))}
     </div>
