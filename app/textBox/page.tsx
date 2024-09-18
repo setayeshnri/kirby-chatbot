@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useRef } from "react";
 interface TextBoxProps {
   conversation: { role: string; content: string | null }[];
