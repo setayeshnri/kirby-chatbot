@@ -1,6 +1,6 @@
 "use client";
-import QuestionBox from "./questionBox/page";
-import TextBox from "./textBox/page";
+import QuestionBox from "../components/questionBox";
+import TextBox from "../components/textBox";
 import useApi from "./hooks/useApi";
 import KirbyAnimation from "./animation/page";
 const Home: React.FC = () => {
