@@ -2,7 +2,7 @@ import styles from "@/styles/kirby.module.css";
 
 const KirbyAnimation = () => {
   return (
-    <div className="relative top-[17vw] left-[4vw] z-10 h-52">
+    <div className="!fixed top-[17vw] left-[4vw] z-10 h-52 max-lg:hidden">
       <div className={styles.body}>
         <div className={styles.face}>
           <div className={styles.eyes}>
@@ -26,6 +26,13 @@ const KirbyAnimation = () => {
         <div className={styles.footLeft} />
         <div className={styles.footRight} />
       </div>
+      <div
+        className="w-[30vw] h-[10vw] relative top-[1vw]  rounded-[619px]"
+        style={{
+          background:
+            "radial-gradient(44.51% 45.05% at 50% 50%, rgba(25, 25, 25, 0.13) 53.21%, rgba(217, 217, 217, 0.00) 100%)",
+        }}
+      ></div>
     </div>
   );
 };
